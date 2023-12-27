@@ -19,28 +19,28 @@ describe("caesar", () => {
         expect(actual).to.equal(expected);
   });
     it("should wrap around characters at the end of alphabet", () => {
-        const actual = caesarModule.caesar("Zelda", 3);
-        const expected = "chogd";
+        const actual = caesarModule.caesar("Arizona", 3);
+        const expected = "dulcrqd";
         expect(actual).to.equal(expected);
     });
   it("should ignore capitalization of letters", () => {
-    const actual = caesarModule.caesar("Hello", 2);
+    const actual = caesarModule.caesar("HELLO", 2);
     const expected = "jgnnq";
     expect(actual).to.eql(expected);
   });
   it("should return false if the shift parameter is not present", () => {
-    const actual = caesarModule.caesar("thinkful");
+    const actual = caesarModule.caesar("error");
     expect(actual).to.be.false;
 it("should return false if the shift is greater than 25", () => {
-        const actual = caesarModule.caesar("BPQA qa I amkzmb umaaiom!", 26);
+        const actual = caesarModule.caesar("error", 26);
         expect(actual).to.be.false; 
     });
     it("should return false if the shift is less than -25", () => {
-        const actual = caesarModule.caesar("BPQA qa I amkzmb umaaiom!", -49);
+        const actual = caesarModule.caesar("error", -49);
         expect(actual).to.be.false; 
     });
     it("should return false if the shift is 0", () => {
-        const actual = caesarModule.caesar("BPQA qa I amkzmb umaaiom!", 0);
+        const actual = caesarModule.caesar("error", 0);
         expect(actual).to.be.false; 
     });
   });
