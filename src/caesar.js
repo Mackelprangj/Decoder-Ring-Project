@@ -7,7 +7,6 @@ const caesarModule = (function () {
     let finalmessage = "";
     let decodedNumber = 0;
     let currentChar = 0;
-    let currentChar = 0;
     //Turns caesar input message into an array of indivual characters
     for (let i = 0; i < input.length; i++){
       newmessage.push(input.toLowerCase().slice(i, i+1));
@@ -16,10 +15,6 @@ const caesarModule = (function () {
         decodedNumber = 0;
         currentChar = newmessage[y].charCodeAt(0);
       //checks if the character is part of standard alphabet via unicode;
-      if (currentChar >= 97 && currentChar <= 122){ 
-        decodedNumber = 0;
-        currentChar = newmessage[y].charCodeAt(0);
-      //checks if the character is part of standard alphabet
       if (currentChar >= 97 && currentChar <= 122){ 
         //checks if after letter shift if the letter needs to wrap around from beginning or end
         if (currentChar + shift > 122) {decodedNumber = currentChar - 26 + shift}
